@@ -72,8 +72,8 @@ async def aboutme(client, message):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-elif query.data == "sourcetxt":
-    await query.answer("Sorry Source Code Of This Bot is Private Add This Bot in Your Group And Use Like Yours😊",show_alert=True)
+    elif query.data == "sourcetxt":
+        await query.answer("Sorry Source Code Of This Bot is Private Add This Bot in Your Group And Use Like Yours😊",show_alert=True)
 
 @Client.on_message(filters.command(["info"]))
 async def who_is(client, message):
