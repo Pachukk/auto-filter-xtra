@@ -245,7 +245,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('𝑻̲̅𝑯̲̅𝑰̲̅𝑺̲̅ 𝑴̲̅𝑶̲̅𝑽̲̅𝑰̲̅𝑬̲̅𝑺̲̅ 𝑰̲̅𝑺̲̅ 𝑵̲̅𝑶̲̅𝑻̲̅ 𝑨̲̅𝑫̲̅𝑫̲̅𝑬̲̅𝑫̲̅ 𝑻̲̅𝑶̲̅ 𝑴̲̅𝒀̲̅ 𝑫̲̅𝑨̲̅𝑻̲̅𝑨̲̅𝑩̲̅𝑨̲̅𝑺̲̅𝑬̲̅ 💌')
+            k = await query.message.edit('𝗧𝗛𝗜𝗦 𝗠𝗢𝗩𝗜𝗘 𝗜𝗦 𝗡𝗢𝗧 𝗔𝗗𝗗𝗘𝗗 𝗠𝗬 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 💌')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -745,15 +745,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('⚚ 𝑨̲̅𝑫̲̅𝑫̲̅ 𝑴̲̅𝑬̲̅ 𝑻̲̅𝑶̲̅ 𝒀̲̅𝑶̲̅𝑼̲̅𝑹̲̅ 𝑮̲̅𝑹̲̅𝑶̲̅𝑼̲̅𝑷̲̅ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('💠 𝑪̲̅𝑯̲̅𝑨̲̅𝑵̲̅𝑵̲̅𝑬̲̅𝑳̲̅ 💠', url='https://t.me/+qQX1ym3YnBM4NjZl'),
-            InlineKeyboardButton('💠 𝑼̲̅𝑷̲̅𝑫̲̅𝑨̲̅𝑻̲̅𝑬̲̅ 💠', url='https://t.me/cinemahub0010')
+            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[      
-            InlineKeyboardButton('♻️ 𝑯̲̅𝑬̲̅𝑳̲̅𝑷̲̅ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ 𝑨̲̅𝑩̲̅𝑶̲̅𝑼̲̅𝑻̲̅ ♻️', callback_data='about')
+            InlineKeyboardButton('🏃‍♂ᴴᴱᴸᴾ🏃‍♂', callback_data='help'),
+            InlineKeyboardButton('📕ᴬᴮᴼᵁᵀ📕', callback_data='about')
             ],[
-            InlineKeyboardButton('✅ 𝑱̲̅𝑶̲̅𝑰̲̅𝑵̲̅ 𝑭̲̅𝑶̲̅𝑹̲̅ 𝑴̲̅𝑶̲̅𝑽̲̅𝑰̲̅𝑬̲̅𝑺̲̅  ✅', url='https://t.me/cinemahub00')
+            InlineKeyboardButton('♻️ 𝗦𝗲𝗮𝗿𝗰𝗵 𝗛𝗲𝗿𝗲 ♻️', switch_inline_query_current_chat=query)
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -793,49 +790,49 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('Mαɴυel Fιlтer', callback_data='manuelfilter'),
-            InlineKeyboardButton('Aυтo Fιlтer', callback_data='autofilter'),
-            InlineKeyboardButton('Coɴɴecтιoɴѕ', callback_data='coct')
+            InlineKeyboardButton('𝗠𝗮𝗻𝘂𝗮𝗹 𝗙𝗶𝗹𝘁𝗲𝗿', callback_data='manuelfilter'),
+            InlineKeyboardButton('𝗔𝘂𝘁𝗼 𝗙𝗶𝗹𝘁𝗲𝗿', callback_data='autofilter'),
+            InlineKeyboardButton('𝗖𝗼𝗹𝗹𝗲𝗰𝘁𝗶𝗼𝗻𝘀', callback_data='coct')
             ],[
-            InlineKeyboardButton('Soɴɢ', callback_data='songs'),
-            InlineKeyboardButton('Eхтrα', callback_data='extra'),
-            InlineKeyboardButton("Vιdeo", callback_data='video')
+            InlineKeyboardButton('𝗦𝗼𝗻𝗴𝘀', callback_data='songs'),
+            InlineKeyboardButton('𝗘𝘅𝘁𝗿𝗮', callback_data='extra'),
+            InlineKeyboardButton("𝗩𝗶𝗱𝗲𝗼", callback_data='video')
             ],[
-            InlineKeyboardButton('Pιɴ', callback_data='pin'), 
-            InlineKeyboardButton('Pαѕтe', callback_data='pastes'),
-            InlineKeyboardButton("Iмαɢe", callback_data='image')
+            InlineKeyboardButton('𝗣𝗶𝗻', callback_data='pin'), 
+            InlineKeyboardButton('𝗣𝗮𝘀𝘁𝗲', callback_data='pastes'),
+            InlineKeyboardButton("𝗜𝗺𝗮𝗴𝗲", callback_data='image')
             ],[
-            InlineKeyboardButton('Fυɴ', callback_data='fun'), 
-            InlineKeyboardButton('𝙹ѕoɴe', callback_data='son'),
-            InlineKeyboardButton('Tтѕ', callback_data='ttss')
+            InlineKeyboardButton('𝗙𝘂𝗻', callback_data='fun'), 
+            InlineKeyboardButton('𝗝𝘀𝗼𝗻𝗲', callback_data='son'),
+            InlineKeyboardButton('𝗧𝘁𝘀', callback_data='ttss')
             ],[
-            InlineKeyboardButton('Pυrɢe', callback_data='purges'),
-            InlineKeyboardButton('Pιɴɢ', callback_data='pings'),
-            InlineKeyboardButton('Teleɢrαpн', callback_data='tele')
+            InlineKeyboardButton('𝗣𝘂𝗿𝗴𝗲', callback_data='purges'),
+            InlineKeyboardButton('𝗣𝗶𝗻𝗴', callback_data='pings'),
+            InlineKeyboardButton('𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗽𝗵', callback_data='tele')
             ],[
-            InlineKeyboardButton('Wнoιѕ', callback_data='whois'),
-            InlineKeyboardButton('Mυтe', callback_data='restric'),
-            InlineKeyboardButton('Kιcĸ', callback_data='zombies')
+            InlineKeyboardButton('𝗪𝗵𝗼𝗶𝘀', callback_data='whois'),
+            InlineKeyboardButton('𝗠𝘂𝘁𝗲', callback_data='restric'),
+            InlineKeyboardButton('𝗞𝗶𝗰𝗸', callback_data='zombies')
             ],[
-            InlineKeyboardButton('Reporт', callback_data='report'),
-            InlineKeyboardButton('Yт-Tнυмв', callback_data='ytthumb'),
-            InlineKeyboardButton('Sтιcĸer-ID', callback_data='sticker')
+            InlineKeyboardButton('𝗥𝗲𝗽𝗼𝗿𝘁', callback_data='report'),
+            InlineKeyboardButton('𝗬𝗧-𝗧𝗵𝘂𝗺𝗯', callback_data='ytthumb'),
+            InlineKeyboardButton('𝗦𝘁𝗶𝗰𝗸𝗲𝗿-𝗜𝗱', callback_data='sticker')
             ],[
-            InlineKeyboardButton('Covιd', callback_data='corona'),
-            InlineKeyboardButton('Aυdιo-Booĸ', callback_data='abook'),
-            InlineKeyboardButton('Url-Sнorт', callback_data='urlshort')
+            InlineKeyboardButton('𝗖𝗼𝘃𝗶𝗱', callback_data='corona'),
+            InlineKeyboardButton('𝗔𝘂𝗱𝗶𝗼-𝗕𝗼𝗼𝗸', callback_data='abook'),
+            InlineKeyboardButton('𝗨𝗿𝗹-𝗦𝗵𝗼𝗿𝘁', callback_data='urlshort')
             ],[
-            InlineKeyboardButton('G-Trαɴѕ', callback_data='gtrans'),
-            InlineKeyboardButton('Fιle-Sтore', callback_data='newdata'),
-            InlineKeyboardButton('Sтαтυѕ', callback_data='stats')
+            InlineKeyboardButton('𝗚-𝗧𝗿𝗮𝗻𝘀', callback_data='gtrans'),
+            InlineKeyboardButton('𝗙𝗶𝗹𝗲-𝗦𝘁𝗼𝗿𝗲', callback_data='newdata'),
+            InlineKeyboardButton('𝗦𝘁𝗮𝘁𝘂𝘀', callback_data='stats')
             ],[
-            InlineKeyboardButton('Repo Lιɴĸ..?', callback_data='deploy')
+            InlineKeyboardButton('❤𝗦𝗼𝘂𝗿𝗰𝗲❤', callback_data='source')
             ],[
-            InlineKeyboardButton('⚚ 𝙱𝙰𝙲𝙺 ⚚', callback_data='start')
+            InlineKeyboardButton('⚚ 𝗕𝗮𝗰𝗸 ⚚', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)       
         await query.message.edit_text(
-            text="Sovel Jαιѕoɴ"
+            text="𝘾𝙝𝙖𝙧𝙡𝙞𝙚 𝘾𝙝𝙖𝙥𝙡𝙞𝙣"
         )
         await query.message.edit_text(                     
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -844,14 +841,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('♥️ 𝑱̲̅𝑶̲̅𝑰̲̅𝑵̲̅ 𝑭̲̅𝑶̲̅𝑹̲̅ 𝑴̲̅𝑶̲̅𝑽̲̅𝑰̲̅𝑬̲̅𝑺̲̅ ♥️', url='https://t.me/cinemahub0010')
+            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🏠 𝑯̲̅𝑶̲̅𝑴̲̅𝑬̲̅ 🏠', callback_data='start'),
-            InlineKeyboardButton('🔐 𝑪̲̅𝑳̲̅𝑶̲̅𝑺̲̅𝑬̲̅ 🔐', callback_data='close_data')
+            InlineKeyboardButton('🏠 𝗛𝗼𝗺𝗲 🏠', callback_data='start'),
+            InlineKeyboardButton('🔐 𝗖𝗹𝗼𝘀𝗲 🔐', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="𝙾𝙿𝚄𝚂-𝚃𝙴𝙲𝙷𝚉"
+            text="𝘾𝙝𝙖𝙧𝙡𝙞𝙚 𝘾𝙝𝙖𝙥𝙡𝙞𝙣"
         )
         await query.message.edit_text(
             text=script.ABOUT_TXT,
@@ -1161,13 +1158,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "deploy":
+    elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.DEPLOY_TXT,
+            text=script.SOURCE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
