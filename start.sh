@@ -1,7 +1,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/PachGit/auto-filter-xtra.git /auto-filter-xtra
+  git clone https://github.com/Pachukk/auto-filter-xtra.git /auto-filter-xtra
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /auto-filter-xtra
