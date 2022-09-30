@@ -60,7 +60,7 @@ You can deploy this bot anywhere.
 <summary>Deploy To Heroku</summary>
 <br>
 <p>
-<a href="https://heroku.com/deploy?template=https://github.com/Bastinjoeid/Ajax-Extra-Features">
+<a href="https://heroku.com/deploy?template=https://github.com/PachGit/auto-filter-xtra">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
