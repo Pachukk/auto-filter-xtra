@@ -74,6 +74,7 @@ async def aboutme(client, message):
         )
     elif query.data == "sourcetxt":
         await query.answer("Sorry Source Code Of This Bot is Private Add This Bot in Your Group And Use Like Yours😊",show_alert=True)
+        ) 
 
 @Client.on_message(filters.command(["info"]))
 async def who_is(client, message):
